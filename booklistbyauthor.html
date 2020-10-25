@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+ 
+          h2
+          {
+                color: black;
+                background-color: rgb(156, 180, 108);
+                text-align: center;
+                border: 1px solid black;
+          }
+          tr:nth-child(odd)
+          {
+                list-style-type: none;
+                margin: 10px;
+                padding: 30px;
+                overflow: hidden;
+                background-color: yellowgreen;
+            }
+            td:nth-child(odd)
+            {
+                
+                list-style-type:none;
+                margin: 10px;
+                padding: 30px;
+                overflow: hidden;
+                background-color: yellow;
+            }
+            .footer
+            {
+                background-color: rgb(139, 167, 84);
+                padding: 10px;
+                text-align: center;
+            }
+            table,th,td
+            {
+                border: 2px solid black;
+            }
+        </style>
+  </head>
+  <body>
+ 
+<div class="container">
+  <h2 style="color: rgb(34, 46, 9);">***THE LIST OF THE BOOKS UNDER THE AUTHOR YOU WANT***</h2>
+  <p>Here you are able to see the names:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>BookName</th>
+        <th>PageNumber</th>
+        <th>Price</th>
+        <th>Genre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>English Grammer Volume 1</td>
+        <td>268</td>
+        <td>400</td>
+        <td>Academics</td>
+      </tr>
+      <tr class ="danger">
+        <td>English Grammer Volume 2</td>
+        <td>385</td>
+        <td>449</td>
+        <td>Academics</td>
+      </tr>
+      <tr class="success">
+        <td>Best 100 English Paragraphs</td>
+        <td>249</td>
+       <td>150</td>
+       <td>Academics</td>
+      </tr>
+      <tr class="danger">
+        <td>Learn how to write letters</td>
+        <td>249</td>
+        <td>150</td>
+        <td>Academics</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="footer">
+    <h1>Hope You Have found your book</h1>
+</div>
+<h4 style="color: rgb(72, 95, 25); text-align: center;">Go To HOME<a href="home.html">CLICK HERE</a></h4>
+
+ 
+</body>
+</html>

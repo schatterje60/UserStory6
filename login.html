@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <style>
+          input[type=password],select
+        {
+            width:100%;
+            background-color:wheat;
+            color:saddlebrown;
+            padding: 14px 20px;
+            margin:8px 0;
+            display: inline-block;
+            border: 2px solid olive;
+            border-radius: 4px;
+            box-sizing:border-box;
+        }
+        input[type=email],select
+        {
+            width:100%;
+            background-color:wheat;
+            color:saddlebrown;
+            padding: 14px 20px;
+            margin:8px 0;
+            display: inline-block;
+            border: 2px solid olive;
+            border-radius: 4px;
+            box-sizing:border-box;
+        }
+    </style>
+<head>
+     <script>
+            function validate()
+            {
+                var email = document.getElementById("email").value;
+                if(email == "") 
+                {
+                    document.getElementById("blankMsg").innerHTML = " ***Please enter your user id*** ";
+                    return false;
+                }
+                var pw1 = document.getElementById("Password").value;
+                if(pw1 == "")
+                {
+                    document.getElementById("blankPass").innerHTML = " ***Please enter your password*** ";
+                    return false;
+                 }
+                 var pw2=document.getElementById('ConfirmedPassword').value;
+                 if(pw2 == "")
+                {
+                    document.getElementById("blankCPass").innerHTML = "***Please confirm your password***";
+                    return false;
+                 }
+                   
+                if(pw1!=pw2)
+                 {
+                     alert("Passwords do not match");
+                     return false;
+                 }
+                return true;
+             }
+           </script>
+        </head>
+        <body>
+            <p><h2 style="color: olive;text-align: center;">*** PLEASE ENTER PROPER INPUT IN ALL THE FIELDS BEFORE LOGGING IN***</h2></p>
+            <div> 
+    
+                <form name="myForm" action="home.html" onsubmit="return (validate());">
+         
+                UserId*: <input type="email" name="email" id="email" required>
+                <span id = "blankMsg" style="color:red"> </span> <br><br>
+                    <form name="myForm">
+                         <label for="Password">Password*</label>
+                            <input type = "password" id="Password" required name = "Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+                                 <span id = "blankPass" style="color:red"> </span> <br><br>
+                                     <br>
+             
+                          <label for=" ConfirmedPassword">Confirm Password*</label>
+                             <input type="password" id="ConfirmedPassword" required name="ConfirmedPassword">
+                                <span id = "blankCPass" style="color:red"> </span> <br><br>
+                                    <br>
+                         </label>
+                         <button onclick="validate()">LOG IN</button>
+         
+                </form>
+          
+                <p>NEW HERE?CLICK ON THE SIGN UP BELLOW.</p><a href="signup.html">SIGN UP</a>
+
+            </div>
+    
+    </body>
+</html>
